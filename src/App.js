@@ -9,7 +9,7 @@ class App extends React.Component {
     return (
       <section>
         <Switch>
-          <Route path="/wallet" component={ Wallet } />
+          <Route path="/carteira" component={ Wallet } />
           <Route exact path="/" component={ Login } />
         </Switch>
       </section>
