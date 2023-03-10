@@ -1,4 +1,4 @@
-import { API_SUCCESS } from '../actions';
+import { API_SUCCESS, SAVE_EXPENSES } from '../actions';
 
 const INITIAL_STATE = {
   currencies: [], // array de string
@@ -13,6 +13,13 @@ const wallet = (state = INITIAL_STATE, action) => {
     return {
       ...state,
       currencies: action.payload,
+    };
+  }
+
+  case SAVE_EXPENSES: {
+    return {
+      ...state,
+      expenses: [...state.expenses, action.payload],
     };
   }
 
