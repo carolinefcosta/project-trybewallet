@@ -126,15 +126,6 @@ class WalletForm extends Component {
         >
           Adicionar despesa
         </button>
-        {/* <section>
-          <ul>
-            {
-              expenses.map((expense, index) => (
-                <li key={ index } value={ expense }>{expense}</li>
-              ))
-            }
-          </ul>
-        </section> */}
       </form>
     );
   }
