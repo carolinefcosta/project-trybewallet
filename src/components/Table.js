@@ -3,6 +3,13 @@ import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 
 class Table extends Component {
+  handleClick = ({ target }) => {
+    const { expenses } = this.props;
+    const { id } = target.id;
+
+    return expenses.filter((expense) => expense.id !== id);
+  };
+
   render() {
     const { expenses } = this.props;
     return (
@@ -35,6 +42,14 @@ class Table extends Component {
                 <td>{parseFloat(exchangeRates[currency].ask).toFixed(2)}</td>
                 <td>{(value * parseFloat(exchangeRates[currency].ask)).toFixed(2)}</td>
                 <td>Real</td>
+                <td>
+                  <button
+                    data-testid="delete-btn"
+                    onClick={ this.handleClick }
+                  >
+                    Excluir
+                  </button>
+                </td>
               </tr>
             ))
           }
