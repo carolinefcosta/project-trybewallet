@@ -1,4 +1,4 @@
-import { API_SUCCESS, SAVE_EXPENSES } from '../actions';
+import { API_SUCCESS, SAVE_EXPENSES, REMOVE } from '../actions';
 
 const INITIAL_STATE = {
   currencies: [], // array de string
@@ -20,6 +20,13 @@ const wallet = (state = INITIAL_STATE, action) => {
     return {
       ...state,
       expenses: [...state.expenses, action.payload],
+    };
+  }
+
+  case REMOVE: {
+    return {
+      ...state,
+      expenses: state.expenses.filter(({ id }) => !(id === action.payload.id)),
     };
   }
 

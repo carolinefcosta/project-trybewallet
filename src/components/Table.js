@@ -1,14 +1,25 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
+import { remove } from '../redux/actions';
 
 class Table extends Component {
-  handleClick = ({ target }) => {
-    const { expenses } = this.props;
-    const { id } = target.id;
+  handleClick = (id) => {
+    const { dispatch } = this.props;
 
-    return expenses.filter((expense) => expense.id !== id);
+    dispatch(remove(id));
   };
+
+  // removeCard({ target }) {
+  //   const { saveCards, hasTrunfo } = this.state;
+  //   const myName = target.id;
+
+  //   const deleting = saveCards.filter((card) => card.cardName !== myName);
+  //   this.setState({
+  //     saveCards: deleting,
+  //     hasTrunfo: (!hasTrunfo),
+  //   });
+  // }
 
   render() {
     const { expenses } = this.props;
@@ -37,15 +48,15 @@ class Table extends Component {
                 <td>{tag}</td>
                 <td>{method}</td>
                 <td>{parseFloat(value).toFixed(2)}</td>
-                <td>{currency}</td>
+                {/* <td>{currency}</td> */}
                 <td>{exchangeRates[currency].name}</td>
                 <td>{parseFloat(exchangeRates[currency].ask).toFixed(2)}</td>
                 <td>{(value * parseFloat(exchangeRates[currency].ask)).toFixed(2)}</td>
-                <td>Real</td>
+                <td>BRL</td>
                 <td>
                   <button
                     data-testid="delete-btn"
-                    onClick={ this.handleClick }
+                    onClick={ () => this.handleClick(id) }
                   >
                     Excluir
                   </button>
@@ -73,6 +84,7 @@ Table.propTypes = {
     method: PropTypes.string,
     tag: PropTypes.string,
   })).isRequired,
+  dispatch: PropTypes.func.isRequired,
 };
 
 export default connect(mapStateToProps)(Table);
