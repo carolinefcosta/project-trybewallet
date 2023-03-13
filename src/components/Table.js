@@ -10,17 +10,6 @@ class Table extends Component {
     dispatch(remove(id));
   };
 
-  // removeCard({ target }) {
-  //   const { saveCards, hasTrunfo } = this.state;
-  //   const myName = target.id;
-
-  //   const deleting = saveCards.filter((card) => card.cardName !== myName);
-  //   this.setState({
-  //     saveCards: deleting,
-  //     hasTrunfo: (!hasTrunfo),
-  //   });
-  // }
-
   render() {
     const { expenses } = this.props;
     return (
@@ -48,7 +37,6 @@ class Table extends Component {
                 <td>{tag}</td>
                 <td>{method}</td>
                 <td>{parseFloat(value).toFixed(2)}</td>
-                {/* <td>{currency}</td> */}
                 <td>{exchangeRates[currency].name}</td>
                 <td>{parseFloat(exchangeRates[currency].ask).toFixed(2)}</td>
                 <td>{(value * parseFloat(exchangeRates[currency].ask)).toFixed(2)}</td>
