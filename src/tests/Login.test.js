@@ -16,7 +16,7 @@ describe('Testa as funcionalidades do componente Login', () => {
 
     const inputEmail = screen.getByTestId('email-input');
     expect(inputEmail).toBeInTheDocument();
-
+    
     const inputPassword = screen.getByTestId('password-input');
     expect(inputPassword).toBeInTheDocument();
   });
