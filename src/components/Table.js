@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import { remove } from '../redux/actions';
+import '../styles/Table.css';
 
 class Table extends Component {
   handleClick = (id) => {
@@ -13,18 +14,18 @@ class Table extends Component {
   render() {
     const { expenses } = this.props;
     return (
-      <table>
-        <thead>
-          <tr>
-            <th>Descrição</th>
-            <th>Tag</th>
-            <th>Método de pagamento</th>
-            <th>Valor</th>
-            <th>Moeda</th>
-            <th>Câmbio utilizado</th>
-            <th>Valor convertido</th>
-            <th>Moeda de conversão</th>
-            <th>Editar/Excluir</th>
+      <table className="table">
+        <thead className="thead">
+          <tr className="tr">
+            <th className="th">Descrição</th>
+            <th className="th">Tag</th>
+            <th className="th">Método de pagamento</th>
+            <th className="th">Valor</th>
+            <th className="th">Moeda</th>
+            <th className="th">Câmbio utilizado</th>
+            <th className="th">Valor convertido</th>
+            <th className="th">Moeda de conversão</th>
+            <th className="th">Excluir</th>
           </tr>
         </thead>
         <tbody>
@@ -46,7 +47,7 @@ class Table extends Component {
                     data-testid="delete-btn"
                     onClick={ () => this.handleClick(id) }
                   >
-                    Excluir
+                    🗑️
                   </button>
                 </td>
               </tr>

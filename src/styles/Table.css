@@ -1,0 +1,16 @@
+.table {
+  color: black;
+  font-size: 20px;
+  display: flexbox;
+  padding: 5px;
+  background-color: rgba(218, 70, 156, 0.87);
+  border: none;
+  text-align: center;
+  width: 90%;
+  margin-left: 5%;
+  border-radius: 10px;
+}
+
+.th {
+  border-left: 1px solid black;
+}
