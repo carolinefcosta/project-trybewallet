@@ -1,14 +1,10 @@
-/* @import url('https://fonts.googleapis.com/css2?family=Indie+Flower&family=Tilt+Prism&display=swap'); */
 @import url('https://fonts.googleapis.com/css2?family=Satisfy&display=swap');
 
 body {
   font-family: 'Satisfy', cursive;
-  /* font-family: 'Tilt Prism', cursive; */
   background-image: url('/src/img/img2.jpg');
   margin: 0;
   background-repeat: repeat;
-  /* background-position: center; */
-  /* background-size: cover; */
 }
 
 .form {
