@@ -2,6 +2,7 @@ export const SAVED_EMAIL = 'SAVED_EMAIL';
 export const API_SUCCESS = 'API_SUCCESS';
 export const SAVE_EXPENSES = 'SAVE_EXPENSES';
 export const REMOVE = 'REMOVE';
+export const EDIT = 'EDIT';
 
 const savedEmail = (email) => ({
   type: SAVED_EMAIL,
@@ -23,6 +24,11 @@ export const remove = (id) => ({
   payload: {
     id,
   },
+});
+
+export const edit = (info) => ({
+  type: EDIT,
+  payload: info,
 });
 
 export const fetchApiCoins = () => async (dispatch) => {
