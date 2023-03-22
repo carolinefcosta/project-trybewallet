@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
-import { remove, edit } from '../redux/actions';
+import { remove } from '../redux/actions';
 import '../styles/Table.css';
 
 class Table extends Component {
@@ -11,11 +11,11 @@ class Table extends Component {
     dispatch(remove(id));
   };
 
-  editClick = (id) => {
-    const { dispatch } = this.props;
+  // editClick = (id) => {
+  //   const { dispatch } = this.props;
 
-    dispatch(edit(id));
-  };
+  //   dispatch(edit(id));
+  // };
 
   render() {
     const { expenses } = this.props;
@@ -31,7 +31,7 @@ class Table extends Component {
             <th className="th">Câmbio utilizado</th>
             <th className="th">Valor convertido</th>
             <th className="th">Moeda de conversão</th>
-            <th className="th">Editar/Excluir</th>
+            <th className="th">Excluir</th>
           </tr>
         </thead>
         <tbody>
@@ -49,13 +49,13 @@ class Table extends Component {
                 <td>{(value * parseFloat(exchangeRates[currency].ask)).toFixed(2)}</td>
                 <td>BRL</td>
                 <td>
-                  <button
+                  {/* <button
                     data-testid="edit-btn"
                     onClick={ () => this.editClick(id) }
                   >
                     📝
-                    {/* Editar */}
-                  </button>
+                    Editar
+                  </button> */}
                   <button
                     data-testid="delete-btn"
                     onClick={ () => this.handleClick(id) }
