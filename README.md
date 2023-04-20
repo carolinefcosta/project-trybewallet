@@ -1,4 +1,4 @@
-💰📝 Projeto Trybewallet 📝💰
+# 💰📝 Projeto Trybewallet 📝💰
 Projeto desenvolvido no módulo de Front-end do curso da Trybe. Neste projeto pude desenvolver uma carteira de controle de gastos com conversor de moedas.
 
 📌 Habilidades:
