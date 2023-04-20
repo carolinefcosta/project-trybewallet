@@ -1,10 +1,11 @@
-# :construction: README em construção ! :construction:
-<!-- Olá, Tryber!
-Esse é apenas um arquivo inicial para o README do seu projeto.
-É essencial que você preencha esse documento por conta própria, ok?
-Não deixe de usar nossas dicas de escrita de README de projetos, e deixe sua criatividade brilhar!
-:warning: IMPORTANTE: você precisa deixar nítido:
-- quais arquivos/pastas foram desenvolvidos por você; 
-- quais arquivos/pastas foram desenvolvidos por outra pessoa estudante;
-- quais arquivos/pastas foram desenvolvidos pela Trybe.
--->
+💰📝 Projeto Trybewallet 📝💰
+Projeto desenvolvido no módulo de Front-end do curso da Trybe. Neste projeto pude desenvolver uma carteira de controle de gastos com conversor de moedas.
+
+📌 Habilidades:
+- Realizar operações básicas de criação e manipulação de um estado de Redux;
+- Criar store, reducers, actions e dispatchers no Redux;
+
+📌 Ao utilizar essa aplicação o usuário deverá ser capaz de:
+- Adicionar e remover um gasto;
+- Visualizar uma tabela com seus gastos;
+- Visualizar o total de gastos convertidos para uma moeda de sua escolha;
