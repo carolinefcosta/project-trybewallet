@@ -11,16 +11,12 @@ Projeto desenvolvido no módulo de Front-end do curso da [Trybe](https://www.bet
 - Visualizar o total de gastos convertidos para uma moeda de sua escolha;
 
 ## ⬇️ Instalando dependências
-
-Frontend
-
-  ```bash
+  ```
   cd src/
   npm install
   ``` 
 
 ## ⚡ Executando a aplicação
-
 Para rodar o front-end:
 
   ```
@@ -28,7 +24,6 @@ Para rodar o front-end:
   ```
 
 ## 🧪 Executando os testes
-
 Para rodar todos os testes:
 
   ```
